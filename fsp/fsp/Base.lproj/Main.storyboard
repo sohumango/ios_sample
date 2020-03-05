@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fsp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qP7-dE-PeA" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="104" width="414" height="590"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k43-pk-Dek" customClass="FSPageControl" customModule="FSPagerView">
+                                <rect key="frame" x="8" y="702" width="398" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="inG-MZ-CCo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="k43-pk-Dek" firstAttribute="top" secondItem="qP7-dE-PeA" secondAttribute="bottom" constant="8" symbolic="YES" id="2X5-Jw-ory"/>
+                            <constraint firstItem="k43-pk-Dek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4we-mA-1AV"/>
+                            <constraint firstItem="qP7-dE-PeA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DGZ-SJ-InC"/>
+                            <constraint firstItem="qP7-dE-PeA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DPZ-FE-Xa2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k43-pk-Dek" secondAttribute="bottom" constant="80" id="O39-Zh-yhu"/>
+                            <constraint firstItem="qP7-dE-PeA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PsY-fK-2Wm"/>
+                            <constraint firstItem="k43-pk-Dek" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="UR9-DY-n2V"/>
+                            <constraint firstItem="qP7-dE-PeA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="shc-Dm-GPS"/>
+                            <constraint firstItem="k43-pk-Dek" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-8" id="umM-Kh-D7k"/>
+                            <constraint firstItem="qP7-dE-PeA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="wPB-nS-DR2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="k43-pk-Dek" id="xiF-CH-3ZM"/>
+                        <outlet property="pagerView" destination="qP7-dE-PeA" id="jSY-e7-yaT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
